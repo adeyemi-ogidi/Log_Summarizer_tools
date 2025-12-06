@@ -17,7 +17,7 @@ Run the program using the command: "./logsummarizer ../Sample_Logs.csv --model l
 2. libcurl (HTTP Client Library)
 3. nlohmann/json (JSON Parsing Library) downloaded  from https://github.com/nlohmann/json
 4. OLLAMA (Local LLM Runtime)
-5. Standard C++ Libraries <iostream>,<fstream>, <sstream>, <string>, <vector>, <stdexcept>,<algorithm>
+5. Standard C++ Libraries "<iostream>,<fstream>, <sstream>, <string>, <vector>, <stdexcept>,<algorithm>"
 
 ## API CALLS
 In ollama_client.cpp, the  
