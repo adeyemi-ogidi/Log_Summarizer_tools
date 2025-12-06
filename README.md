@@ -10,4 +10,14 @@ For this program we compiled using CMAKE
 
 ## How to run
 Run the program using the command: "./logsummarizer ../Sample_Logs.csv --model llama3 --url http://localhost:11434"
-# Log_Summarizer_tools
+
+
+## Dependencies:
+1. c++ compiler {g++ (GNU C++ Compiler)}
+2. libcurl (HTTP Client Library)
+3. nlohmann/json (JSON Parsing Library) downloaded  from https://github.com/nlohmann/json
+4. OLLAMA (Local LLM Runtime)
+5. Standard C++ Libraries <iostream>,<fstream>, <sstream>, <string>, <vector>, <stdexcept>,<algorithm>
+
+## API CALLS
+In ollama_client.cpp, the  
