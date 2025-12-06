@@ -5,7 +5,10 @@ This project implements a cybersecurity analyst support tool that uses a locally
 
 There are two methods for compiling the program:
 a. Using CMAKE and
+
 b. running the command g++ -std=c++17 src/main.cpp  src/LogParser.cpp  src/ReportGenerator.cpp src/OllamaClient.cpp  -Iinclude -lcurl -o logsummarizer. 
+
+
 For this program we compiled using CMAKE
 
 ## How to run
@@ -20,4 +23,14 @@ Run the program using the command: "./logsummarizer ../Sample_Logs.csv --model l
 5. Standard C++ Libraries "<iostream>,<fstream>, <sstream>, <string>, <vector>, <stdexcept>,<algorithm>"
 
 ## API CALLS
-In ollama_client.cpp, the  
+In ollama_client.cpp, the 
+
+## Parser Logic and API call logic
+The logparser.cpp, logParser.h, Types.h all allowed the programm to open the input csv file, read the input line by line and also split it into timestamp, severity, message etc and also converts it to an object that the programm can process
+It is referenced in the main.cpp program:   std::vector<LogEntry> entries = LogParser::parseCsv(logPath);
+
+API LOGIC: The modules /OllamaClient.cpp and OllamaClient.h, implement API call logic to OLLAMA server via the address http://localhost:11434/api/chat using libcurl
+
+
+
+
