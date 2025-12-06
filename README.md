@@ -22,14 +22,21 @@ Run the program using the command: "./logsummarizer ../Sample_Logs.csv --model l
 4. OLLAMA (Local LLM Runtime)
 5. Standard C++ Libraries "<iostream>,<fstream>, <sstream>, <string>, <vector>, <stdexcept>,<algorithm>"
 
-## API CALLS
-In ollama_client.cpp, the 
 
 ## Parser Logic and API call logic
 The logparser.cpp, logParser.h, Types.h all allowed the programm to open the input csv file, read the input line by line and also split it into timestamp, severity, message etc and also converts it to an object that the programm can process
 It is referenced in the main.cpp program:   std::vector<LogEntry> entries = LogParser::parseCsv(logPath);
 
 API LOGIC: The modules /OllamaClient.cpp and OllamaClient.h, implement API call logic to OLLAMA server via the address http://localhost:11434/api/chat using libcurl
+
+Below is the block of code within ollamaClient.cpp that shows the API call
+
+curl_easy_setopt(curl, CURLOPT_URL, fullUrl.c_str());
+curl_easy_setopt(curl, CURLOPT_POSTFIELDS, jsonBody.c_str());
+curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writeCallback);
+curl_easy_setopt(curl, CURLOPT_WRITEDATA, &responseBody);
+CURLcode res = curl_easy_perform(curl);
+
 
 
 
