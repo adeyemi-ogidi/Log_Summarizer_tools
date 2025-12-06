@@ -1,0 +1,252 @@
+timestamp,host,severity,message
+2025-11-30T09:59:01Z,web01,low,Nginx worker process started successfully
+2025-11-30T10:00:12Z,web01,medium,Successful login for user alice from 192.168.10.21
+2025-11-30T10:00:55Z,web01,high,Failed login for user admin from 192.168.10.50
+2025-11-30T10:01:03Z,web01,high,Failed login for user admin from 192.168.10.50
+2025-11-30T10:01:10Z,web01,high,Failed login for user admin from 192.168.10.50
+2025-11-30T10:01:22Z,web01,medium,Account lockout threshold exceeded for user admin from 192.168.10.50
+2025-11-30T10:02:01Z,web01,medium,Successful login for user bob from 192.168.10.22
+2025-11-30T10:02:35Z,web02,low,HTTP 200 response for /index.php from 203.0.113.5
+2025-11-30T10:02:39Z,web02,low,HTTP 404 response for /phpmyadmin/ from 203.0.113.5
+2025-11-30T10:02:44Z,web02,medium,Repeated 404s for /wp-login.php from 203.0.113.5
+2025-11-30T10:03:01Z,fw01,low,Allowed outbound connection from 192.168.10.21:50932 to 8.8.8.8:53
+2025-11-30T10:03:05Z,fw01,low,Allowed outbound connection from 192.168.10.22:50933 to 8.8.4.4:53
+2025-11-30T10:03:10Z,fw01,medium,Blocked inbound connection from 203.0.113.5:59500 to 192.168.10.10:22 (policy: deny-external-ssh)
+2025-11-30T10:03:20Z,fw01,medium,Port scan detected from 203.0.113.5 targeting 192.168.10.10 TCP ports 22-1024
+2025-11-30T10:03:31Z,siem01,medium,Correlation rule triggered: External port scan against web segment from 203.0.113.5
+2025-11-30T10:03:45Z,db01,low,MySQL connection from web01 (192.168.10.10) user=app_readonly
+2025-11-30T10:03:52Z,db01,medium,Failed login for user root from 192.168.10.10
+2025-11-30T10:03:57Z,db01,medium,Failed login for user root from 192.168.10.10
+2025-11-30T10:04:02Z,db01,high,Multiple authentication failure for user root from 192.168.10.10
+2025-11-30T10:04:10Z,web01,low,PHP notice: Undefined index in /var/www/app/login.php
+2025-11-30T10:04:20Z,web01,high,Failed login for user admin from 192.168.10.51
+2025-11-30T10:04:26Z,web01,high,Failed login for user admin from 192.168.10.51
+2025-11-30T10:04:32Z,web01,high,Failed login for user admin from 192.168.10.51
+2025-11-30T10:04:40Z,web01,medium,Account lockout threshold exceeded for user admin from 192.168.10.51
+2025-11-30T10:04:55Z,win10-client01,low,User alice logged on interactively
+2025-11-30T10:05:02Z,win10-client01,medium,User alice started process chrome.exe
+2025-11-30T10:05:15Z,win10-client01,high,Suspicious PowerShell command detected: powershell.exe -nop -w hidden -enc <redacted>
+2025-11-30T10:05:18Z,edr01,high,Endpoint alert: Potential malicious PowerShell on host win10-client01 (rule: PS-EncodedCommand)
+2025-11-30T10:05:25Z,siem01,high,Correlation rule triggered: Suspicious PowerShell plus outbound connections from win10-client01
+2025-11-30T10:05:30Z,fw01,medium,Allowed outbound connection from 192.168.10.101:51300 to 198.51.100.10:443
+2025-11-30T10:05:34Z,fw01,medium,Allowed outbound connection from 192.168.10.101:51301 to 198.51.100.10:443
+2025-11-30T10:05:40Z,fw01,median,Unusual outbound connection pattern from 192.168.10.101 to 198.51.100.10:443
+2025-11-30T10:05:48Z,edr01,high,Endpoint alert: Possible C2 traffic from win10-client01 to 198.51.100.10
+2025-11-30T10:06:01Z,web02,low,HTTP 200 response for /login from 192.168.10.25
+2025-11-30T10:06:10Z,web02,medium,Failed login for user test from 192.168.10.25
+2025-11-30T10:06:16Z,web02,medium,Failed login for user test from 192.168.10.25
+2025-11-30T10:06:20Z,web02,medium,Successful login for user test from 192.168.10.25
+2025-11-30T10:06:30Z,db01,low,MySQL query executed by app_user from 192.168.10.10: SELECT * FROM customers WHERE id=?
+2025-11-30T10:06:45Z,db01,medium,Long-running query from app_user (duration 12s) from 192.168.10.10
+2025-11-30T10:06:59Z,web01,low,Session created for user bob with session id abc123
+2025-11-30T10:07:03Z,web01,high,Failed login for user admin from 203.0.113.10
+2025-11-30T10:07:09Z,web01,high,Failed login for user admin from 203.0.113.10
+2025-11-30T10:07:15Z,web01,high,Failed login for user admin from 203.0.113.10
+2025-11-30T10:07:20Z,web01,high,Failed login for user admin from 203.0.113.10
+2025-11-30T10:07:25Z,web01,high,Failed login for user admin from 203.0.113.10
+2025-11-30T10:07:32Z,fw01,medium,Blocked inbound connection from 203.0.113.10:60022 to 192.168.10.10:22 (policy: brute-force-ssh)
+2025-11-30T10:07:40Z,siem01,high,Correlation rule triggered: SSH brute-force from 203.0.113.10 against web01
+2025-11-30T10:07:55Z,web02,low,HTTP 200 response for /api/health from 127.0.0.1
+2025-11-30T10:08:05Z,web02,low,HTTP 500 response for /api/report from 192.168.10.21
+2025-11-30T10:08:10Z,web02,medium,Application error: stack trace logged to /var/log/app/error.log
+2025-11-30T10:08:20Z,win10-client02,low,User bob logged on interactively
+2025-11-30T10:08:25Z,win10-client02,medium,User bob started process outlook.exe
+2025-11-30T10:08:31Z,win10-client02,high,User bob opened attachment invoice_2025-11-30.zip from untrusted sender
+2025-11-30T10:08:40Z,av01,high,Malware detected: Trojan.Generic in invoice_2025-11-30.zip on host win10-client02
+2025-11-30T10:08:45Z,edr01,high,Endpoint alert: Suspicious process extraction from invoice_2025-11-30.zip on win10-client02
+2025-11-30T10:08:55Z,siem01,high,Correlation rule triggered: Malware detection plus suspicious process on win10-client02
+2025-11-30T10:09:10Z,fw01,medium,Blocked outbound connection from 192.168.10.102:52000 to 203.0.113.200:4444 (potential C2)
+2025-11-30T10:09:15Z,fw01,medium,Blocked outbound connection from 192.168.10.102:52001 to 203.0.113.200:4444 (potential C2)
+2025-11-30T10:09:25Z,web01,low,Successful login for user service_account from 192.168.10.5
+2025-11-30T10:09:31Z,web01,medium,Unexpected login time for service_account from 192.168.10.5
+2025-11-30T10:09:40Z,siem01,medium,Behavioral anomaly: service_account interactive login detected out-of-hours
+2025-11-30T10:09:55Z,win10-client01,medium,RDP session initiated from 192.168.10.5 to 192.168.10.101
+2025-11-30T10:10:02Z,win10-client01,high,RDP session authenticated as user alice from 192.168.10.5
+2025-11-30T10:10:12Z,edr01,high,Potential lateral movement: RDP logon from admin workstation to win10-client01
+2025-11-30T10:10:25Z,db01,medium,New MySQL connection from 192.168.10.101 user=app_readonly
+2025-11-30T10:10:31Z,db01,high,Unusual query volume from 192.168.10.101 user=app_readonly
+2025-11-30T10:10:40Z,db01,critical,Data export query detected: SELECT * FROM customers LIMIT 100000
+2025-11-30T10:10:45Z,siem01,critical,Possible data exfiltration: Large export from db01 by account app_readonly via host 192.168.10.101
+2025-11-30T10:10:55Z,fw01,critical,Large outbound transfer from 192.168.10.101:53000 to 198.51.100.10:443 (size 50MB)
+2025-11-30T10:11:05Z,fw01,critical,Large outbound transfer from 192.168.10.101:53001 to 198.51.100.10:443 (size 60MB)
+2025-11-30T10:11:12Z,siem01,critical,Correlation rule triggered: Possible data exfiltration via HTTPS from 192.168.10.101
+2025-11-30T10:11:25Z,web02,low,HTTP 200 response for /dashboard from 192.168.10.25
+2025-11-30T10:11:32Z,web02,low,User test requested /dashboard/export?type=csv
+2025-11-30T10:11:40Z,web02,medium,Application rate limit triggered for user test on /dashboard/export
+2025-11-30T10:11:55Z,web01,low,Session timeout for user bob
+2025-11-30T10:12:02Z,web01,medium,Failed login for user bob from 192.168.10.21
+2025-11-30T10:12:08Z,web01,medium,Successful login for user bob from 192.168.10.21
+2025-11-30T10:12:15Z,win10-client03,low,User charlie logged on interactively
+2025-11-30T10:12:22Z,win10-client03,medium,User charlie mounted network share \\fileserver01\public
+2025-11-30T10:12:30Z,win10-client03,high,Ransomware-like behavior detected: multiple file renames with extension .locked
+2025-11-30T10:12:35Z,av01,high,Ransomware detected: Ransom.XYZ on host win10-client03
+2025-11-30T10:12:40Z,edr01,critical,Endpoint alert: Mass file encryption blocked on win10-client03
+2025-11-30T10:12:45Z,fw01,medium,Blocked outbound connection from 192.168.10.103:54000 to 203.0.113.150:5555 (known ransomware C2)
+2025-11-30T10:12:55Z,siem01,critical,Correlation rule triggered: Ransomware activity on win10-client03
+2025-11-30T10:13:05Z,web02,low,HTTP 200 response for / from 192.168.10.26
+2025-11-30T10:13:12Z,web02,medium,Failed login for user admin from 192.168.10.26
+2025-11-30T10:13:16Z,web02,medium,Failed login for user admin from 192.168.10.26
+2025-11-30T10:13:20Z,web02,high,Failed login for user admin from 192.168.10.26
+2025-11-30T10:13:26Z,web02,high,Account lockout threshold exceeded for user admin from 192.168.10.26
+2025-11-30T10:13:35Z,fw01,low,Allowed DNS query from 192.168.10.26 for api.example.com
+2025-11-30T10:13:40Z,fw01,medium,Unusually long DNS TXT response from 198.51.100.20 for domain data.example.com
+2025-11-30T10:13:45Z,siem01,high,Potential DNS tunneling detected from 192.168.10.26
+2025-11-30T10:13:55Z,win10-client01,low,User alice locked workstation
+2025-11-30T10:14:02Z,win10-client01,low,User alice unlocked workstation
+2025-11-30T10:14:10Z,win10-client01,medium,USB storage device inserted: VID_1234&PID_5678
+2025-11-30T10:14:18Z,edr01,medium,New USB device on win10-client01, monitoring file operations
+2025-11-30T10:14:25Z,win10-client01,high,Large number of files copied from C:\Sensitive to E:\USB_DRIVE
+2025-11-30T10:14:35Z,siem01,high,Possible insider data exfiltration via USB on win10-client01
+2025-11-30T10:14:45Z,fw01,low,Allowed outbound connection from 192.168.10.20:55000 to 1.1.1.1:53
+2025-11-30T10:14:55Z,fw01,low,Allowed outbound connection from 192.168.10.20:55001 to 1.0.0.1:53
+2025-11-30T10:15:02Z,web01,low,Health check OK from 127.0.0.1
+2025-11-30T10:15:10Z,web01,medium,Failed login for user guest from 203.0.113.30
+2025-11-30T10:15:15Z,web01,medium,Failed login for user guest from 203.0.113.30
+2025-11-30T10:15:22Z,web01,medium,Failed login for user guest from 203.0.113.30
+2025-11-30T10:15:30Z,fw01,medium,Blocked inbound connection from 203.0.113.30:61000 to 192.168.10.10:22
+2025-11-30T10:15:40Z,siem01,medium,External SSH probing detected from 203.0.113.30
+2025-11-30T10:15:55Z,db01,low,MySQL connection closed for app_user from 192.168.10.10
+2025-11-30T10:16:05Z,db01,low,Database backup job started
+2025-11-30T10:16:15Z,db01,low,Database backup job completed successfully
+2025-11-30T10:16:25Z,siem01,low,Daily backup status: SUCCESS for db01
+2025-11-30T10:16:35Z,web02,low,HTTP 200 response for /metrics from 127.0.0.1
+2025-11-30T10:16:45Z,web02,low,Application metrics: cpu=35% mem=62%
+2025-11-30T10:16:55Z,fw01,low,Allowed outbound connection from 192.168.10.11:56000 to 203.0.113.50:80
+2025-11-30T10:17:05Z,fw01,low,Allowed outbound connection from 192.168.10.11:56001 to 203.0.113.50:443
+2025-11-30T10:17:15Z,siem01,medium,New external connection pattern baseline updated for 192.168.10.11
+2025-11-30T10:17:25Z,win10-client02,low,User bob locked workstation
+2025-11-30T10:17:35Z,win10-client02,low,User bob unlocked workstation
+2025-11-30T10:17:45Z,win10-client02,medium,User bob executed cmd.exe /c whoami /all
+2025-11-30T10:17:55Z,edr01,medium,Suspicious command-line enumeration on win10-client02
+2025-11-30T10:18:05Z,siem01,medium,Potential recon commands observed on win10-client02
+2025-11-30T10:18:15Z,fw01,low,Allowed outbound connection from 192.168.10.102:57000 to 198.51.100.10:443
+2025-11-30T10:18:25Z,fw01,medium,Outbound connection volume from 192.168.10.102 to 198.51.100.10 exceeded threshold
+2025-11-30T10:18:35Z,siem01,high,Potential ongoing C2 communication from 192.168.10.102 to 198.51.100.10
+2025-11-30T10:18:45Z,web01,high,Failed login for user admin from 203.0.113.60
+2025-11-30T10:18:51Z,web01,high,Failed login for user admin from 203.0.113.60
+2025-11-30T10:18:57Z,web01,high,Failed login for user admin from 203.0.113.60
+2025-11-30T10:19:02Z,web01,medium,Account lockout threshold exceeded for user admin from 203.0.113.60
+2025-11-30T10:19:10Z,fw01,medium,Blocked inbound SSH attempt from 203.0.113.60:61222 to 192.168.10.10:22
+2025-11-30T10:19:20Z,siem01,high,External brute-force classification confirmed for 203.0.113.60 targeting web segment
+2025-11-30T10:19:30Z,web02,low,HTTP 200 response for /shop from 192.168.10.27
+2025-11-30T10:19:36Z,web02,medium,Failed login for user demo from 192.168.10.27
+2025-11-30T10:19:42Z,web02,low,User demo accessed /shop/cart
+2025-11-30T10:19:55Z,web02,low,HTTP 200 response for /shop/pay from 192.168.10.27
+2025-11-30T10:20:05Z,win10-client03,medium,User charlie attempted to run unsigned executable from Downloads
+2025-11-30T10:20:10Z,edr01,high,Blocked unsigned executable execution on win10-client03
+2025-11-30T10:20:15Z,av01,medium,Quarantined file suspicious.exe on win10-client03
+2025-11-30T10:20:25Z,siem01,medium,Host win10-client03 exhibits repeated malware-like behavior
+2025-11-30T10:20:35Z,fw01,low,Allowed outbound connection from 192.168.10.23:58001 to 8.8.8.8:53
+2025-11-30T10:20:43Z,fw01,low,Allowed outbound connection from 192.168.10.24:58002 to 1.1.1.1:53
+2025-11-30T10:20:55Z,win10-client01,medium,Process teams.exe launched
+2025-11-30T10:21:03Z,win10-client01,high,Process teams.exe spawned powershell.exe unexpectedly
+2025-11-30T10:21:10Z,edr01,high,Potential process injection detected: teams.exe -> powershell.exe on win10-client01
+2025-11-30T10:21:20Z,fw01,medium,Outbound connection from 192.168.10.101 to 198.51.100.10 persists abnormally
+2025-11-30T10:21:25Z,siem01,high,Ongoing beaconing behavior detected from host win10-client01
+2025-11-30T10:21:35Z,db01,low,MySQL connection established from 192.168.10.22 user=reporting_bot
+2025-11-30T10:21:45Z,db01,medium,Long-running report query detected from reporting_bot
+2025-11-30T10:21:52Z,db01,medium,Failed login for user reporting_bot from 192.168.10.22
+2025-11-30T10:22:01Z,db01,high,Multiple authentication failures for reporting_bot from 192.168.10.22
+2025-11-30T10:22:15Z,web01,low,Cache warmup ran successfully
+2025-11-30T10:22:22Z,web01,medium,New session created for user guest
+2025-11-30T10:22:30Z,web01,high,Failed login for user admin from 203.0.113.61
+2025-11-30T10:22:36Z,web01,high,Failed login for user admin from 203.0.113.61
+2025-11-30T10:22:42Z,web01,high,Failed login for user admin from 203.0.113.61
+2025-11-30T10:22:50Z,fw01,medium,Blocked inbound SSH attempt from 203.0.113.61:62000 to 192.168.10.10:22
+2025-11-30T10:23:10Z,win10-client02,medium,User bob executed powershell.exe -command whoami
+2025-11-30T10:23:20Z,siem01,medium,Reconnaissance behavior confirmed on win10-client02
+2025-11-30T10:23:27Z,fw01,medium,Outbound DNS query anomaly from 192.168.10.102 for unusually long TXT record
+2025-11-30T10:23:31Z,siem01,high,Possible DNS data exfiltration from host 192.168.10.102
+2025-11-30T10:23:40Z,edr01,high,Unauthorized registry modification attempt: HKCU\Software\Microsoft\Windows\Run
+2025-11-30T10:23:51Z,av01,medium,Scanning detected suspicious file behavior on win10-client02
+2025-11-30T10:24:00Z,fw01,low,Allowed outbound connection from 192.168.10.15:59001 to 8.8.8.8:53
+2025-11-30T10:24:08Z,fw01,low,Allowed outbound connection from 192.168.10.15:59002 to 8.8.4.4:53
+2025-11-30T10:24:20Z,web02,medium,PHP warning: Deprecated function used in /var/www/app/cart.php
+2025-11-30T10:24:31Z,web02,medium,Failed login attempt for user test from 192.168.10.22
+2025-11-30T10:24:41Z,web02,high,Failed login for user admin from 192.168.10.22
+2025-11-30T10:24:49Z,web02,high,Failed login for user admin from 192.168.10.22
+2025-11-30T10:24:55Z,web02,high,Failed login for user admin from 192.168.10.22
+2025-11-30T10:25:01Z,siem01,medium,Excessive failed logins detected on web02
+2025-11-30T10:25:09Z,fw01,medium,External scanning detected from 203.0.113.62 on TCP ports 80–8080
+2025-11-30T10:25:20Z,fw01,high,Blocked inbound connection from 203.0.113.62:61005 to 192.168.10.11:8080
+2025-11-30T10:25:31Z,siem01,high,Web app perimeter scan detected from 203.0.113.62
+2025-11-30T10:25:40Z,web01,low,Session ended for user alice
+2025-11-30T10:25:48Z,web01,medium,Session hijack pattern possibility due to duplicate session IDs from 203.0.113.80
+2025-11-30T10:25:55Z,siem01,high,Session anomaly detected: potential session fixation attack
+2025-11-30T10:26:10Z,win10-client01,high,Unauthorized SMB access attempt to \\fileserver01\restricted
+2025-11-30T10:26:20Z,edr01,critical,SMB brute-force activity blocked on win10-client01
+2025-11-30T10:26:30Z,siem01,critical,Lateral movement attempt detected via SMB
+2025-11-30T10:26:45Z,win10-client03,medium,Shadow copy deletion attempted via vssadmin
+2025-11-30T10:26:52Z,edr01,high,Unauthorized VSS deletion attempt blocked on win10-client03
+2025-11-30T10:27:03Z,siem01,critical,Possible ransomware precursor behavior detected on win10-client03
+2025-11-30T10:27:10Z,fw01,medium,Outbound traffic spike observed from 192.168.10.103 to 203.0.113.200:4444
+2025-11-30T10:27:20Z,fw01,critical,C2 beaconing sustained from 192.168.10.103
+2025-11-30T10:27:35Z,siem01,critical,Sustained C2 communication detected from host win10-client03
+2025-11-30T10:27:55Z,web02,low,HTTP 200 OK response for /auth/check from 127.0.0.1
+2025-11-30T10:28:02Z,web02,medium,User test initiated password reset
+2025-11-30T10:28:12Z,web02,medium,Password reset code verified for user test
+2025-11-30T10:28:25Z,web02,low,User test updated profile settings
+2025-11-30T10:28:31Z,web02,low,User test viewed /dashboard
+2025-11-30T10:28:40Z,web02,high,Multiple failed API token authentications for user test
+2025-11-30T10:28:45Z,siem01,medium,API abuse pattern detected for user test
+2025-11-30T10:28:55Z,win10-client02,medium,New scheduled task created: CleanupJob123
+2025-11-30T10:29:03Z,edr01,high,Scheduled task manipulation potential persistence technique win10-client02
+2025-11-30T10:29:12Z,siem01,high,Persistence technique detected on win10-client02
+2025-11-30T10:29:25Z,fw01,low,Allowed outbound connection from 192.168.10.12:60000 to 8.8.8.8:53
+2025-11-30T10:29:35Z,fw01,low,Allowed outbound connection from 192.168.10.12:60001 to 1.1.1.1:53
+2025-11-30T10:29:45Z,win10-client01,medium,User alice opened phishing_email.html
+2025-11-30T10:29:55Z,win10-client01,high,Embedded script executed from phishing_email.html
+2025-11-30T10:30:03Z,edr01,high,HTML smuggling attempt detected on win10-client01
+2025-11-30T10:30:12Z,siem01,critical,HTML smuggling + script execution chain indicates phishing compromise
+2025-11-30T10:30:25Z,web01,low,Health check passed
+2025-11-30T10:30:33Z,web01,medium,Failed login for user marketing from 192.168.10.33
+2025-11-30T10:30:42Z,web01,medium,User marketing successfully authenticated
+2025-11-30T10:30:55Z,fw01,medium,Outbound HTTPS burst from 192.168.10.33 to 203.0.113.150
+2025-11-30T10:31:05Z,siem01,high,Behavior abnormal: User marketing generating atypical external transfers
+2025-11-30T10:31:20Z,db01,medium,Unusual SELECT query with wildcard from app_readonly on 192.168.10.10
+2025-11-30T10:31:32Z,db01,high,Suspicious query volume increase on db01
+2025-11-30T10:31:41Z,siem01,critical,Possible credential abuse for database access on db01
+2025-11-30T10:31:55Z,fw01,medium,Multiple outbound attempts from 192.168.10.10:61000 to 198.51.100.50
+2025-11-30T10:32:02Z,fw01,high,Blocked outbound connection to known malicious IP 198.51.100.50
+2025-11-30T10:32:12Z,siem01,high,Command-and-control communication attempt blocked from host web01
+2025-11-30T10:32:25Z,win10-client03,low,User charlie locked workstation
+2025-11-30T10:32:33Z,win10-client03,medium,User charlie unlocked workstation
+2025-11-30T10:32:41Z,win10-client03,high,Suspicious script launched from network share
+2025-11-30T10:32:50Z,edr01,high,Script-based attack attempt blocked on win10-client03
+2025-11-30T10:33:02Z,siem01,high,Script compromise chain detected on win10-client03
+2025-11-30T10:33:15Z,fw01,medium,Outbound SMB traffic unusual from 192.168.10.103
+2025-11-30T10:33:22Z,siem01,high,Possible lateral movement via SMB from compromised host
+2025-11-30T10:33:35Z,win10-client01,medium,User alice opened suspicious.pdf
+2025-11-30T10:33:45Z,edr01,high,Exploit attempt detected in suspicious.pdf
+2025-11-30T10:33:55Z,siem01,critical,PDF exploit chain indicates possible compromise on win10-client01
+2025-11-30T10:34:10Z,web02,low,HTTP 200 response for /api/health
+2025-11-30T10:34:18Z,web02,medium,High memory usage warning (85%)
+2025-11-30T10:34:26Z,web02,medium,Application auto-scaling event triggered
+2025-11-30T10:34:35Z,web02,low,New container instance booted successfully
+2025-11-30T10:34:48Z,siem01,low,Scaling behavior recorded for dashboard app
+2025-11-30T10:35:02Z,win10-client02,medium,User bob opened encrypted_email.eml
+2025-11-30T10:35:10Z,win10-client02,high,Macro-enabled document executed automatically
+2025-11-30T10:35:18Z,edr01,high,Malicious macro execution blocked on win10-client02
+2025-11-30T10:35:25Z,siem01,critical,Macro malware infection attempt detected
+2025-11-30T10:35:40Z,fw01,medium,Outbound FTP attempt detected from 192.168.10.102
+2025-11-30T10:35:47Z,fw01,high,FTP exfiltration attempt blocked from 192.168.10.102
+2025-11-30T10:35:55Z,siem01,critical,Data exfiltration prevention triggered on host win10-client02
+2025-11-30T10:36:10Z,web01,low,Autologout processed for inactive sessions
+2025-11-30T10:36:20Z,web01,medium,Failed login for user hr_admin from 192.168.10.34
+2025-11-30T10:36:30Z,web01,medium,Failed login for user hr_admin from 192.168.10.34
+2025-11-30T10:36:38Z,web01,high,Account lockout threshold exceeded for user hr_admin
+2025-11-30T10:36:50Z,siem01,medium,Possible credential stuffing attack detected
+2025-11-30T10:37:05Z,fw01,low,Allowed DNS query from 192.168.10.34 to 1.1.1.1
+2025-11-30T10:37:14Z,fw01,medium,Long DNS TXT response from 198.51.100.70
+2025-11-30T10:37:22Z,siem01,high,Advanced DNS tunneling pattern identified
+2025-11-30T10:37:40Z,win10-client03,medium,Scheduled backup task executed
+2025-11-30T10:37:49Z,win10-client03,low,Backup completed successfully
+2025-11-30T10:38:02Z,win10-client01,high,Unauthorized Powershell downloaded script from hxxp://malicious.example.com/payload.ps1
+2025-11-30T10:38:15Z,edr01,critical,Remote script execution blocked on win10-client01
+2025-11-30T10:38:25Z,siem01,critical,Confirmed PowerShell-based dropper attempt
+2025-11-30T10:38:40Z,fw01,medium,Outbound HTTP attempt denied to malicious domain malicious.example.com
+2025-11-30T10:38:50Z,siem01,high,Threat intelligence match: malicious.example.com known malware host
+2025-11-30T10:39:05Z,web02,low,HTTP 200 response for /api/products
+2025-11-30T10:39:15Z,web02,medium,User test accessed /api/products/export
+2025-11-30T10:39:22Z,web02,high,CSV export volume exceeded normal threshold
+2025-11-30T10:39:35Z,siem01,medium,Possible insider data collection on web02

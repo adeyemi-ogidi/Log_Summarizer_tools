@@ -1,0 +1,3 @@
+/home/kali/projects/ollamatools/build/CMakeFiles/logsummarizer.dir
+/home/kali/projects/ollamatools/build/CMakeFiles/edit_cache.dir
+/home/kali/projects/ollamatools/build/CMakeFiles/rebuild_cache.dir
